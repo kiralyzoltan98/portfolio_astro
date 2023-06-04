@@ -1,120 +1,150 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro"
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+import ContactCTA from "../components/ContactCTA.astro"
+import Hero from "../components/Hero.astro"
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+<BaseLayout
+  title="About | Király Zoltán"
+  description="About Király Zoltán Welcome!"
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="About"
+        tagline="Welcome and thank you for taking the time to know more about me. Scroll down to explore my journey, achievements, and the skills I have gathered along the way."
+        align="start"
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/at-work.png"
+          alt="Király Zoltán at work with concentrating"
+        />
+      </Hero>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            With over two years of experience as a Lead Developer and a
+            background in teaching programming, I've honed my skills in
+            full-stack web development, problem-solving, and team leadership. My
+            passion for self-improvement and lifelong learning has driven my
+            career progression and continues to motivate me in my professional
+            journey.
+          </p>
+          <p style="padding-top: 0.5rem">
+            Currently leading a team at <a href="https://netopgraf.hu/"
+              >Netopgraf</a
+            >, my role includes overseeing web applications development,
+            performing code reviews, and providing guidance.
+          </p>
+          <p style="padding-top: 0.5rem">
+            Prior to this, I've gained experience in teaching programming to
+            elementary school children at Logischool, which honed my
+            communication skills. I also had a stint with logistics at Magura
+            Event Kft. that helped me appreciate the importance of organization
+            and teamwork.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p>
+            Bachelor's Degree in Computer Science Engineering (Final Grade: 5) -
+            University of Pannonia, 2018-2023
+          </p>
+          <p style="padding-top: 0.5rem">
+            Software Developer Qualification (OKJ) - Bolyai János Technical High
+            School, 2017-2018
+          </p>
+          <p style="padding-top: 0.5rem">
+            IT Specialization - Bolyai János Technical High School, 2013-2017
+          </p>
+          <p style="padding-top: 0.5rem">
+            Web Dev Simplified React Course - Kyle Cook (WebDevSimplified), 2023
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <p>
+            As a Full-Stack Web Developer, I bring to the table a range of
+            competencies. This includes advanced knowledge of server management
+            and a deep understanding of Git, honed through real-world
+            experience. My leadership capabilities, developed as a team lead,
+            enable me to effectively guide and manage projects. Alongside these,
+            my problem-solving acumen has consistently proven valuable in
+            overcoming challenges and driving progress. Another practical
+            ability I possess is a Driver's License, further broadening my
+            professional capacities.
+          </p>
+        </div>
+      </section>
+    </main>
 
-		<ContactCTA />
-	</div>
+    <ContactCTA />
+
+    <style>
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+      }
+
+      img {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gray-200);
+      }
+
+      .section-title {
+        grid-column-start: 1;
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+      }
+
+      .content {
+        grid-column: 2 / 4;
+      }
+
+      .content :global(a) {
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+      }
+
+      .content :global(a:hover),
+      .content :global(a:focus) {
+        text-decoration-color: currentColor;
+      }
+
+      @media (min-width: 50em) {
+        .about {
+          display: grid;
+          grid-template-columns: 1fr 60% 1fr;
+        }
+
+        .about > :global(:first-child) {
+          grid-column-start: 2;
+        }
+
+        section {
+          display: contents;
+          font-size: var(--text-lg);
+        }
+      }
+    </style>
+  </div>
 </BaseLayout>
-
-<style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
-</style>
