@@ -1,4 +1,12 @@
-# Astro Starter Kit: Portfolio
+# About this Portfolio
+
+This portfolio has been adapted from an existing template, and while it is not an original creation, I've made significant changes to the content and features to reflect my professional journey and personal style. One such feature I've added is the inclusion of my CV in the navigation bar.
+
+My previous experiences with Astro, a component-based front-end framework, has been beneficial for this project. Although this portfolio is template-based, I assure you that I thoroughly understand its intricacies, owing to my earlier work with Astro on other projects.
+
+Please note, all the contents on this website - my experiences, skills, and the projects I've worked on - are wholly my own.
+
+## Credit to Original Author
 
 ```
 npm create astro@latest -- --template portfolio
