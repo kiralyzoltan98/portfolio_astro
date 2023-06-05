@@ -12,6 +12,8 @@ tags:
   - Minimalist
 ---
 
+Image: The top of my CV!
+
 ### An Eye for Design
 
 Designing a CV goes beyond just listing skills and experiences. It's about presenting your professional story in a way that's digestible, yet impactful. I knew I wanted a minimalist design that didn't skimp on providing pertinent information.

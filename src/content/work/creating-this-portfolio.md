@@ -12,7 +12,7 @@ tags:
   - Self-Learning
 ---
 
-This is how it all started in plain JavaScript and HTML.
+Image: This is how it all started in plain JavaScript and HTML.
 
 ### The Early Days
 
