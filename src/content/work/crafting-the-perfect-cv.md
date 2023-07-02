@@ -1,6 +1,6 @@
 ---
 title: Crafting the Perfect CV
-publishDate: 2019-10-02 00:00:00
+publishDate: 2023-01-02 00:00:00
 img: /assets/cv-header.png
 img_alt: The top of my CV giving a sneak peak into what its design looks like
 description: |

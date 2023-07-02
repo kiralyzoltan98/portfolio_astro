@@ -1,6 +1,6 @@
 ---
 title: Creating This Portfolio
-publishDate: 2019-12-01 00:00:00
+publishDate: 2023-03-01 00:00:00
 img: /assets/portfolio-alfa.png
 img_alt: An image of the first prototype of my very own personal portfolio page.
 description: |

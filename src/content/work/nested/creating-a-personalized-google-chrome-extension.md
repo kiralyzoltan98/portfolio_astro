@@ -1,6 +1,6 @@
 ---
 title: Creating a Personalized Google Chrome Extension
-publishDate: 2020-03-04 00:00:00
+publishDate: 2023-02-28 00:00:00
 img: /assets/webtoon-tracker.png
 img_alt: An image of the Google Chrome Extension itself in action.
 description: |
