@@ -1,6 +1,6 @@
 ---
 title: Exploring GraphQL through an Astro-React App
-publishDate: 2023-04-01 00:00:00
+publishDate: 2024-04-01 00:00:00
 img: /assets/tech-stack.png
 img_alt: The logo of Astro, React, GraphQL, ExpressJS and Mongodb the technologies I used for this project.
 description: |
