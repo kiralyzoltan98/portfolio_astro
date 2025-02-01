@@ -60,4 +60,4 @@ Webtoon Tracker Extension 2.0 is more than just an update; it’s a reimagining 
 
 Whether you’re a casual reader or a Manhwa enthusiast, Webtoon Tracker Extension 2.0 has everything you need to stay on top of your favorite series. Give it a try and see how these new changes can transform your reading habits.
 
-##### Check out my CV <a href="https://chrome.google.com/webstore/detail/webtoon-tracker/mbdlodgnohifpjmgkimdinhgbgdcohml?hl=en&gclid=Cj0KCQjwj_ajBhCqARIsAA37s0xf6Nd9W_dgIR5ukl5Rcl9jkQc_IU_O-dpxAWcNkCw5vxZ3qbZSdOUaAifOEALw_wcB">HERE</a>
+##### Check out the updated version of my webtoon tracker plugin <a href="https://chrome.google.com/webstore/detail/webtoon-tracker/mbdlodgnohifpjmgkimdinhgbgdcohml?hl=en&gclid=Cj0KCQjwj_ajBhCqARIsAA37s0xf6Nd9W_dgIR5ukl5Rcl9jkQc_IU_O-dpxAWcNkCw5vxZ3qbZSdOUaAifOEALw_wcB">HERE</a>
