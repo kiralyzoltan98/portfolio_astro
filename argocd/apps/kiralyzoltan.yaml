@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kiralyzoltan
+  namespace: argocd
+spec:
+  project: homelab-websites
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  source:
+    repoURL: https://github.com/kiralyzoltan98/portfolio_astro
+    targetRevision: main
+    path: argocd/charts/web-deploy
+    helm:
+      valueFiles:
+        - ../../values/kiralyzoltan-values.yaml
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=false

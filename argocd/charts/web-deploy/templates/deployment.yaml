@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.name }}
+    spec:
+      containers:
+        - name: web
+          image: {{ .Values.image }}
+          ports:
+            - containerPort: 80
+          {{- if .Values.volumeMounts }}
+          volumeMounts:
+            - name: persistent-storage
+              mountPath: {{ .Values.volumeMountPath }}
+          {{- end }}
+      {{- if .Values.volumeMounts }}
+      volumes:
+        - name: persistent-storage
+          hostPath:
+            path: {{ .Values.hostPath }}
+            type: DirectoryOrCreate
+      {{- end }}
