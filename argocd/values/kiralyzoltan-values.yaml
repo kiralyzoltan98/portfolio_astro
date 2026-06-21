@@ -1,4 +1,4 @@
 name: kiralyzoltan-website
-image: localhost:5000/kiralyzoltan.com:1.2.0-SNAPSHOT
+image: registry.kiralyzoltan.com/kiralyzoltan.com:8bbb746
 nodePort: 30080
 volumeMounts: false
