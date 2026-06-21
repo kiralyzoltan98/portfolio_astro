@@ -1,0 +1,49 @@
+name: CI/CD Build and GitOps Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: orgs/setup-buildx-action@v3
+
+      - name: Log in to Nexus Registry
+        uses: docker/login-action@v3
+        with:
+          registry: registry.kiralyzoltan.com
+          username: ${{ secrets.NEXUS_REGISTRY_USER }}
+          password: ${{ secrets.NEXUS_REGISTRY_PASSWORD }}
+
+      - name: Generate Image Tag
+        id: vars
+        run: echo "SHA_TAG=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: registry.kiralyzoltan.com/kiralyzoltan.com:${{ steps.vars.outputs.SHA_TAG }}
+          cache-from: type=registry,ref=registry.kiralyzoltan.com/kiralyzoltan.com:cache
+          cache-to: type=registry,ref=registry.kiralyzoltan.com/kiralyzoltan.com:cache,mode=max
+
+      - name: Update ArgoCD Helm Values
+        run: |
+          sed -i "s|image:.*|image: registry.kiralyzoltan.com/kiralyzoltan.com:${{ steps.vars.outputs.SHA_TAG }}|g" argocd/values/kiralyzoltan-values.yaml
+
+      - name: Commit and Push Image Tag Change
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add argocd/values/kiralyzoltan-values.yaml
+          git commit -m "chore(deploy): update image tag to ${{ steps.vars.outputs.SHA_TAG }} [skip ci]"
+          git push
