@@ -3,7 +3,7 @@ name: CI/CD Build and GitOps Deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-push:

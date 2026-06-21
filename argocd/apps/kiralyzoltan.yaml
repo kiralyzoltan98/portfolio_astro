@@ -10,7 +10,7 @@ spec:
     namespace: default
   source:
     repoURL: https://github.com/kiralyzoltan98/portfolio_astro
-    targetRevision: main
+    targetRevision: master
     path: argocd/charts/web-deploy
     helm:
       valueFiles:
