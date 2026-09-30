@@ -1,4 +1,4 @@
 name: kiralyzoltan-website
-image: registry.kiralyzoltan.com/kiralyzoltan.com:8bbb746
+image: registry.kiralyzoltan.com/kiralyzoltan.com:c3d288b
 nodePort: 30080
 volumeMounts: false
